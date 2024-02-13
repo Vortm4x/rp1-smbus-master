@@ -1,0 +1,6 @@
+{
+    "cmake.configureArgs": [
+        "-DCMAKE_TOOLCHAIN_FILE=${userHome}/raspbian/cross-compile/toolchains/armv6-rpi-linux-gnueabihf/armv6-rpi-linux-gnueabihf.toolchain.cmake"
+    ],
+    "cmake.configureOnOpen": true
+}
