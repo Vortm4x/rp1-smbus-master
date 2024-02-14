@@ -10,6 +10,11 @@ sudo nano /boot/config.txt
 Insert following line
 
 ```bash
+dtoverlay=i2c-gpio,bus=BUS_NUMBER,i2c_gpio_delay_us=GPIO_DELAY_US,i2c_gpio_sda=SDA_PIN,i2c_gpio_scl=SCL_PIN
+```
+
+For example (replaces default i2c-0 device on RPI 1 Model B rev1)
+```bash
 dtoverlay=i2c-gpio,bus=0,i2c_gpio_delay_us=2,i2c_gpio_sda=23,i2c_gpio_scl=24
 ```
 
