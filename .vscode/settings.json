@@ -2,5 +2,17 @@
     "cmake.configureArgs": [
         "-DCMAKE_TOOLCHAIN_FILE=${userHome}/raspbian/cross-compile/toolchains/armv6-rpi-linux-gnueabihf/armv6-rpi-linux-gnueabihf.toolchain.cmake"
     ],
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "i2c.h": "c",
+        "i2c-dev.h": "c",
+        "types.h": "c",
+        "posix_types.h": "c",
+        "ioctl.h": "c",
+        "ttydefaults.h": "c",
+        "stdlib.h": "c",
+        "stddef.h": "c",
+        "errno.h": "c",
+        "errno-base.h": "c"
+    }
 }

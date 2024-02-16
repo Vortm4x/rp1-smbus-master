@@ -19,12 +19,14 @@ set(RASPBIAN_INSTALL_PREFIX "${RASPBIAN_TARGET_ROOT}/home/pi")
 # Library part
 add_library(${PROJECT_LIB} STATIC
     lib/smbus.c
+    lib/smbus_pec.c
 )
 target_link_libraries(${PROJECT_LIB}
     i2c
 )
 target_include_directories(${PROJECT_LIB} PUBLIC
-    "${PROJECT_ROOT}/include"
+    $<BUILD_INTERFACE:${PROJECT_ROOT}/include>
+    $<INSTALL_INTERFACE:${PROJECT_ROOT}include/smbus>
 )
 target_compile_options(${PROJECT_LIB} PRIVATE -Wall)
 
@@ -38,7 +40,7 @@ target_link_libraries(${PROJECT_CMD}
     ${PROJECT_LIB}
 )
 target_include_directories(${PROJECT_LIB} PUBLIC
-    "${PROJECT_ROOT}/include"
+    $<BUILD_INTERFACE:${PROJECT_ROOT}/include>
 )
 target_compile_options(${PROJECT_LIB} PRIVATE -Wall)
 
